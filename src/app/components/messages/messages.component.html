@@ -4,16 +4,16 @@
       <hr>
     </div>
     <div class="row">
-      <div class="col-sm-5">
+      <!-- <div class="col-sm-5">
         <div class="form-group">
           <label for="username">Username</label>
-          <input type="text" [(ngModel)]="user" class="form-control" id="username" placeholder="Enter username">
+          <input type="text" [(ngModel)]="user" class="form-control" id="username" placeholder="{{ userconncted.username }}">
         </div>
-      </div>
+      </div> -->
        <div class="col sm-2">
         <div style="margin-top:19px;">
-          <button type="button" class="btn btn-primary" (click)="join()">Join</button>
-         <button type="button" class="btn btn-default" (click)="leave()">Leave</button>
+         <button type="button" class="btn btn-primary p-2" (click)="join()">Join chating room</button>&nbsp;&nbsp;&nbsp;
+         <button type="button" class="btn btn-danger p-2" (click)="leave()">Leave</button>
         </div>
       </div>
     </div>
