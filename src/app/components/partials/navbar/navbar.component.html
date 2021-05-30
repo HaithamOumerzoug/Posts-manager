@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary mb-4">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">
+        SH-Posts
+    </a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul  class="navbar-nav ms-md-auto">
+        <li class="nav-item">
+          <a routerLink="/register" *ngIf="!loggedIn" class="nav-link">Register</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/login" *ngIf="!loggedIn" class="nav-link">Login</a>
+        </li>
+      </ul>
+      <ul *ngIf="loggedIn"  class="navbar-nav ms-md-auto">
+        
+        <li   class="nav-item">
+          <a routerLink="#"  class="nav-link">Add posts</a>
+        </li>
+        
+        <li class="nav-item">
+          <a routerLink="#"  class="nav-link">{{user.username}}</a>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link btn-logout" (click)="logout()">Logout</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
