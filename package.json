@@ -6,7 +6,8 @@
     "start": "ng serve -o",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "startBackEnd": "node ./backend/server.js"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +22,10 @@
     "@angular/router": "~12.0.0",
     "bootstrap": "^5.0.1",
     "bootswatch": "^5.0.1",
+    "express": "^4.17.1",
     "rxjs": "~6.6.0",
+    "socket.io": "^4.1.2",
+    "socket.io-client": "^4.1.2",
     "tslib": "^2.1.0",
     "zone.js": "~0.11.4"
   },

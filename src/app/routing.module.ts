@@ -5,6 +5,7 @@ import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { PostsComponent } from './components/posts/posts.component';
+import { MessagesComponent } from './components/messages/messages.component';
 
 const routes: Routes = [
     {
@@ -18,7 +19,11 @@ const routes: Routes = [
     {
         path:"login",
         component:LoginComponent,
-    }
+    },
+    {
+      path:"messenger",
+      component:MessagesComponent,
+  }
 ]
 
 @NgModule({

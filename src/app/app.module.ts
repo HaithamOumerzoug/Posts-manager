@@ -9,6 +9,7 @@ import { PostsComponent } from './components/posts/posts.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './services/auth.service';
 import { AppRoutingModule } from './routing.module';
+import { MessagesComponent } from './components/messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppRoutingModule } from './routing.module';
     LoginComponent,
     RegisterComponent,
     NavbarComponent,
-    PostsComponent
+    PostsComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
