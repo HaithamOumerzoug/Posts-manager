@@ -1,30 +1,15 @@
 import { Injectable } from '@angular/core';
+import { UserService } from './user.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  users:Array<any>=[{
-    id:1,
-    username:'haitham31',
-    password:'123456789'
-  },{
-    id:2,
-    username:'said-bachar',
-    password:'123456789'
-  },{
-    id:3,
-    username:'ayamane-gi',
-    password:'123456789'
-  },{
-    id:4,
-    username:'John-Doe',
-    password:'123456789'
-  }]
-  constructor() { }
+  
+  constructor(private userServ:UserService) { }
 
   login(username:string |any ,password:string | any):void{
-    this.users.forEach((user:any)=>{
+    this.userServ.users.forEach((user:any)=>{
       if(user.username===username && user.password===password){
         this.handelresponse({username:user.username,id:user.id})
       };
