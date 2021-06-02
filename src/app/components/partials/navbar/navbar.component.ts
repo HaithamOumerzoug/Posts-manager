@@ -25,4 +25,5 @@ export class NavbarComponent implements OnInit {
   get user(){
     return this.userServ.user;
   }
+ 
 }

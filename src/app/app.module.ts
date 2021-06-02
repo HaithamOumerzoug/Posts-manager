@@ -10,6 +10,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './services/auth.service';
 import { AppRoutingModule } from './routing.module';
 import { MessagesComponent } from './components/messages/messages.component';
+import { UsernamePipe } from './pipes/username.pipe';
+import { AddPostComponent } from './components/add-post/add-post.component';
+import { CommentComponent } from './components/comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { MessagesComponent } from './components/messages/messages.component';
     RegisterComponent,
     NavbarComponent,
     PostsComponent,
-    MessagesComponent
+    MessagesComponent,
+    UsernamePipe,
+    AddPostComponent,
+    CommentComponent,
   ],
   imports: [
     BrowserModule,

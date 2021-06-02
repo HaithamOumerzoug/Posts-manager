@@ -6,11 +6,16 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { MessagesComponent } from './components/messages/messages.component';
+import { AddPostComponent } from './components/add-post/add-post.component';
 
 const routes: Routes = [
     {
         path:"",
         component:PostsComponent
+    },
+    {
+      path:"addPost",
+      component:AddPostComponent
     },
     {
         path:"register",
