@@ -1,1 +1,37 @@
-<p>register works!</p>
+
+<div class="row mt-5">
+  <div class="col-md-6 mx-auto">
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input
+            formControlName="username"
+            type="text"
+            class="form-control mt-1"
+            id="username"
+            >
+        </div>
+      <div class="form-group mb-3">
+        <label for="password">Password</label>
+        <input
+          formControlName="password"
+          type="password"
+          class="form-control mt-1"
+          id="password"
+        >
+      </div>
+       <div class="form-group">
+            <label for="avatar">Url Avatar</label>
+            <input
+            formControlName="img"
+            type="text"
+            class="form-control mt-1"
+            id="avatar"
+            >
+        </div>
+
+      <button class="btn btn-primary btn-block">Sign Up</button>
+    </form>
+  </div>
+</div>

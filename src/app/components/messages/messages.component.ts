@@ -37,6 +37,7 @@ export class MessagesComponent implements OnInit {
     sendMessage()
       {
         this.messageService.sendMessage({user: this.userconncted.username, room: this.room, message: this.messageText});
+        this.messageText = ""
       }
 
     ngOnInit(): void {

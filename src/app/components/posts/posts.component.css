@@ -89,3 +89,10 @@ hr {
     outline: 0;
     box-shadow: none
 }
+.send{
+    background-color: transparent;
+    border: none;
+}
+.i-send :hover{
+    background-color: rgb(33, 148, 241);
+}

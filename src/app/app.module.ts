@@ -13,6 +13,8 @@ import { MessagesComponent } from './components/messages/messages.component';
 import { UsernamePipe } from './pipes/username.pipe';
 import { AddPostComponent } from './components/add-post/add-post.component';
 import { CommentComponent } from './components/comment/comment.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditPostComponent } from './components/edit-post/edit-post.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import { CommentComponent } from './components/comment/comment.component';
     UsernamePipe,
     AddPostComponent,
     CommentComponent,
+    EditPostComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

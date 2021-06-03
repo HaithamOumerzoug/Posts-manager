@@ -9,7 +9,8 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./comment.component.css']
 })
 export class CommentComponent implements OnInit {
-  @Input() idPost:any;
+  @Input() idPost:any
+  @Input() content_input:any;
   constructor(private postServ:PostService,private userServ:UserService) { }
 
   ngOnInit(): void {
@@ -19,8 +20,8 @@ export class CommentComponent implements OnInit {
     var comment=new Comment();
     comment.content=content.value;
     comment.user_id=this.userServ.user.id;
-    comment.user_id=this.idPost;
+    comment.id=this.idPost;
     this.postServ.addCommentToPost(this.idPost,comment);
+    this.content_input=''
   }
-
 }

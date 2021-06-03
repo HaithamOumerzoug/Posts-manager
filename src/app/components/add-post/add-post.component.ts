@@ -26,10 +26,10 @@ export class AddPostComponent implements OnInit {
   addPost(){
     var new_post= new Post()
     new_post=this.Postform.value;
-    console.log(typeof(this.userServ.user.id))
+    new_post.id=this.postServ.posts.length+1;
     new_post.user_id=this.userServ.user.id;
     new_post.comments=[];
-
+    new_post.likes=[];
     this.postServ.addPost(this.Postform.value)
     this.router.navigateByUrl('/')
   }

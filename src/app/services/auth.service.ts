@@ -36,6 +36,10 @@ export class AuthService {
       };
     }) 
   }
+  register(user:User):any{
+   this.users=[user,...this.users];
+   return this.users;
+  }
   loggedIn(){
     return localStorage.getItem('id')!==null && localStorage.getItem('username')!==null;
   }

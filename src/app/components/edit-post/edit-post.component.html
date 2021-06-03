@@ -1,0 +1,20 @@
+<form [formGroup]="Postform" (ngSubmit)="updatePost()">
+    <div class="form-outline mb-4">
+        <label class="form-label" for="title">Title <b style="color: red;">*</b></label>
+      <input formControlName="title" name="title" type="text" id="title" class="form-control" />
+    </div>
+  
+    
+    <div class="form-outline mb-4">
+        <label class="form-label" for="body">Body <b style="color: red;">*</b></label>
+      <textarea formControlName="body" name="body" class="form-control" id="body" rows="4"></textarea>
+    </div>
+    
+    <div class="form-outline mb-4">
+        <label class="form-label" for="image">Url image</label>
+        <input formControlName="urlImage" name="urlImage" type="text" id="image" class="form-control" />
+    </div>  
+  
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-warning btn-block mb-4">Update</button>
+  </form>
