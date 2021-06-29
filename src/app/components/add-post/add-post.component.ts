@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Post } from 'src/app/models/post.model';
 import { PostService } from 'src/app/services/post.service';
@@ -14,7 +14,7 @@ export class AddPostComponent implements OnInit {
   Postform:FormGroup|any;
   constructor(private postServ:PostService,private router:Router,private userServ:UserService) { 
     this.Postform= new FormGroup({
-      title:new FormControl(''),
+      title:new FormControl('',[Validators.required,Validators.maxLength(10)]),
       body:new FormControl(''),
       urlImage:new FormControl(''),
     })

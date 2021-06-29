@@ -10,6 +10,7 @@ import { AddPostComponent } from './components/add-post/add-post.component';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AfterauthGuard } from './guards/afterauth.guard';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 const routes: Routes = [
     {
@@ -41,6 +42,10 @@ const routes: Routes = [
       path:"edit/:id",
       component:EditPostComponent,
       canActivate:[AuthGuard]
+    },
+    {
+      path:"**",
+      component:NotfoundComponent
     }
 ]
 

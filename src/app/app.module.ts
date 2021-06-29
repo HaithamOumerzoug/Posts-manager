@@ -15,6 +15,7 @@ import { AddPostComponent } from './components/add-post/add-post.component';
 import { CommentComponent } from './components/comment/comment.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { EditPostComponent } from './components/edit-post/edit-post.component';
     AddPostComponent,
     CommentComponent,
     EditPostComponent,
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,
